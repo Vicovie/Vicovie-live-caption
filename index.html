@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071321"><meta name="description" content="VICOVIE LIVE CAPTION — live speech captions for churches, events and meetings.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><title>VICOVIE LIVE CAPTION</title>
+</head>
+<body>
+<header class="topbar"><div class="brand"><div class="brandmark">V</div><div><div class="brandname">VICOVIE <span>LIVE CAPTION</span></div><div class="tagline">VICOVIE TECHNOLOGIES · Every Word. Every Song. Every Moment.</div></div></div><div class="status"><i id="statusDot"></i><span id="statusText">Ready</span></div></header>
+<main class="layout">
+<section class="panel controls"><div class="section-head"><div><p class="eyebrow">CONTROL CENTRE</p><h1>Live caption studio</h1></div><span class="badge">BETA 1.0</span></div>
+<div class="notice"><b>Before you begin</b><br>Use Chrome or Microsoft Edge. Allow microphone access. For live microphone captions, open this app through HTTPS or localhost.</div>
+<div class="field-grid"><label>Event mode<select id="mode"><option>Church Service</option><option>Worship / Concert</option><option>Meeting</option><option>Conference</option><option>General Presentation</option></select></label><label>Spoken language<select id="language"><option value="en-NG">English (Nigeria)</option><option value="en-US">English (US)</option><option value="yo-NG">Yorùbá</option><option value="ig-NG">Igbo</option><option value="ha-NG">Hausa</option><option value="fr-FR">French</option></select></label></div>
+<div class="actions"><button class="btn primary" id="startBtn">▶ Start microphone</button><button class="btn danger" id="stopBtn" disabled>■ Stop</button><button class="btn" id="projectorBtn">▣ Open projector</button><button class="btn gold" id="installBtn" hidden>＋ Install app</button></div>
+<div class="field"><label for="manualText">Manual caption / correction</label><div class="manual-row"><input id="manualText" placeholder="Type a caption or corrected sentence…"><button class="btn gold" id="sendBtn">Display</button></div></div>
+<div class="field-grid"><label>Caption size <select id="fontSize"><option value="32">Small</option><option value="42" selected>Medium</option><option value="54">Large</option><option value="68">Extra large</option></select></label><label>Caption theme <select id="theme"><option value="dark">Dark / white</option><option value="blue">Blue / white</option><option value="light">Light / dark</option><option value="gold">Black / gold</option></select></label></div>
+<div class="toggle-row"><label class="check"><input type="checkbox" id="showReference" checked> Show VICOVIE branding on projector</label><label class="check"><input type="checkbox" id="showHistory" checked> Show recent caption history</label></div>
+<div class="actions secondary"><button class="btn" id="clearBtn">Clear captions</button><button class="btn" id="downloadBtn">↓ Download TXT</button><button class="btn" id="downloadSrtBtn">↓ Download SRT</button></div>
+<div class="support"><b>Audio & privacy:</b> Select the church mixer/interface as the laptop's default input in Windows/macOS sound settings before starting. Browser speech recognition may send audio to the browser provider for processing; review its privacy terms. This app does not store raw audio.<br><br><b>Microphone tip:</b> For clearer church captions, take a clean AUX/REC/USB feed from the mixer into the laptop audio interface. Do not connect an amplifier speaker output directly to the laptop.</div>
+</section>
+<section class="panel preview-panel"><div class="section-head"><div><p class="eyebrow">AUDIENCE PREVIEW</p><h2>Projector output</h2></div><span class="live-label"><i></i> LIVE PREVIEW</span></div>
+<div id="preview" class="screen theme-dark"><div class="screen-top" id="screenBrand">VICOVIE LIVE CAPTION</div><div class="caption" id="previewCaption">Your live captions will appear here.</div><div class="screen-bottom" id="previewMode">CHURCH SERVICE</div></div>
+<div class="preview-foot"><span>Preview updates as captions arrive.</span><span id="wordCount">0 words</span></div>
+<div class="history-head"><h3>Recent captions</h3><span id="lineCount">0 lines</span></div><div id="history" class="history"><p class="empty">Your caption history will appear here.</p></div>
+</section>
+</main>
+<footer>© <span id="year"></span> VICOVIE TECHNOLOGIES · VICOVIE LIVE CAPTION <span class="footer-note">Installable web app · Speech recognition depends on supported browser services and internet.</span></footer>
+<script src="app.js"></script>
+</body></html>
